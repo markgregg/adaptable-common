@@ -23,13 +23,16 @@ val kotestVersion = "5.4.2"
 val mockitoKotlinVersion = "3.2.0"
 val adaptableExpression = "1.0.0-SNAPSHOT"
 
+val downLoadPackageUser="markgregg"
+val downLoadPackageToken="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"
+
 repositories {
 	mavenCentral()
 	maven {
 		url = uri("https://maven.pkg.github.com/markgregg/adaptable-expression")
 		credentials {
-			username = System.getenv("USERNAME")
-			password = System.getenv("TOKEN")
+			username = downLoadPackageUser
+			password = downLoadPackageToken
 		}
 	}
 }
