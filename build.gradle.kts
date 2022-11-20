@@ -13,14 +13,15 @@ plugins {
 group = "org.adaptable"
 version = "1.0.0-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
-val projectDescription = "Adaptable common functionality"
 
+val projectDescription = "Adaptable common functionality"
 val githubRepo = "markgregg/adaptable-common"
 val licenseUrl = "https://opensource.org/licenses/Apache-2.0"
 val licenseName = "Apache 2"
 
 val kotestVersion = "5.4.2"
 val mockitoKotlinVersion = "3.2.0"
+val adaptableExpression = "1.0.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
@@ -34,7 +35,7 @@ repositories {
 }
 
 dependencies {
-	implementation("org.adaptable:adaptable-expression:1.0.0-SNAPSHOT")
+	implementation("org.adaptable:adaptable-expression:$adaptableExpression")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.slf4j:slf4j-api")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
