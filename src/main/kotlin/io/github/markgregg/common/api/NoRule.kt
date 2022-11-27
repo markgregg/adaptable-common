@@ -1,6 +1,6 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
-import org.adaptable.common.api.utils.ResponseManager
+import io.github.markgregg.common.api.utils.ResponseManager
 
 data class NoRule (
     val response: Response?,

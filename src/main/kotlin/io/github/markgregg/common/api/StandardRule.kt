@@ -1,8 +1,8 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
-import org.adaptable.common.api.utils.ResponseManager
-import org.adaptable.expression.Evaluator
-import org.adaptable.expression.operations.Operation
+import io.github.markgregg.common.api.utils.ResponseManager
+import io.github.markgregg.expression.Evaluator
+import io.github.markgregg.expression.operations.Operation
 
 data class StandardRule (
     val expression: String?,
@@ -14,7 +14,7 @@ data class StandardRule (
     constructor(
         expression: String,
         response: Response,
-       otherwise: Rule
+        otherwise: Rule
     ) : this(expression,response,null, otherwise)
     constructor(
         expression: String,

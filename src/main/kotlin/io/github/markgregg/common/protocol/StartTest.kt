@@ -1,5 +1,5 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
-import org.adaptable.common.api.Test
+import io.github.markgregg.common.api.Test
 
-class StartTest(val test: Test) : Command
+class StartTest(val test: io.github.markgregg.common.api.Test) : Command

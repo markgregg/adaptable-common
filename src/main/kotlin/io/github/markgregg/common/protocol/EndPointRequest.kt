@@ -1,8 +1,8 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
-import org.adaptable.common.api.Request
+import io.github.markgregg.common.api.Request
 
 class EndPointRequest(
     val endPointId: String,
-    val request: Request
+    val request: io.github.markgregg.common.api.Request
 ) : Command

@@ -1,8 +1,8 @@
-package org.adaptable.common.api.endpoints
+package io.github.markgregg.common.api.endpoints
 
-import org.adaptable.common.api.Response
-import org.adaptable.common.api.interfaces.EndPoint
-import org.adaptable.common.api.interfaces.Session
+import io.github.markgregg.common.api.Response
+import io.github.markgregg.common.api.interfaces.EndPoint
+import io.github.markgregg.common.api.interfaces.Session
 
 interface EventEndPoint : EndPoint {
     fun setSession(session: Session)

@@ -1,12 +1,12 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
-import org.adaptable.common.api.Payload
-import org.adaptable.common.api.Response
+import io.github.markgregg.common.api.Payload
+import io.github.markgregg.common.api.Response
 
-class Message<T : Response> (
+class Message<T : io.github.markgregg.common.api.Response> (
     val endPoint: String,
     val response: T
-) : Command, Payload<T> {
+) : Command, io.github.markgregg.common.api.Payload<T> {
     override fun payload(): T? {
         return response
     }

@@ -1,10 +1,10 @@
-package org.adaptable.common.api.interfaces
+package io.github.markgregg.common.api.interfaces
 
-import org.adaptable.common.api.Request
-import org.adaptable.common.api.Response
-import org.adaptable.common.api.Rule
-import org.adaptable.common.api.endpoints.TestCaseAlreadyActiveException
-import org.adaptable.common.api.endpoints.TestCaseNotActiveException
+import io.github.markgregg.common.api.Request
+import io.github.markgregg.common.api.Response
+import io.github.markgregg.common.api.Rule
+import io.github.markgregg.common.api.endpoints.TestCaseAlreadyActiveException
+import io.github.markgregg.common.api.endpoints.TestCaseNotActiveException
 
 interface EndPoint {
     val id: String

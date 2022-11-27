@@ -1,4 +1,4 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
 data class EndPoint(
     val id: String,

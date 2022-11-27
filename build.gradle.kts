@@ -10,7 +10,7 @@ plugins {
 	id("org.jetbrains.dokka") version "1.4.20"
 }
 
-group = "org.adaptable"
+group = "io.github.markgregg"
 version = "1.0.0-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -29,16 +29,12 @@ val downLoadPackageToken="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"
 repositories {
 	mavenCentral()
 	maven {
-		url = uri("https://maven.pkg.github.com/markgregg/adaptable-expression")
-		credentials {
-			username = downLoadPackageUser
-			password = downLoadPackageToken
-		}
+		url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
 	}
 }
 
 dependencies {
-	implementation("org.adaptable:adaptable-expression:$adaptableExpression")
+	implementation("io.github.markgregg:adaptable-expression:$adaptableExpression")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.slf4j:slf4j-api")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -115,11 +111,26 @@ publishing {
 
 	repositories {
 		maven {
-			url = uri("https://maven.pkg.github.com/markgregg/adaptable-common")
+			name = "mavenStaging"
+			url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
 			credentials {
-				username = System.getenv("USERNAME")
-				password = System.getenv("TOKEN")
+				username = providers.gradleProperty("ossrhUsername").get()
+				password = providers.gradleProperty("ossrhPassword").get()
+			}
+		}
+		maven {
+			name = "mavenSnapshots"
+			url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+			credentials {
+				username = providers.gradleProperty("ossrhUsername").get()
+				password = providers.gradleProperty("ossrhPassword").get()
 			}
 		}
 	}
+
+
+	signing {
+		sign(publishing.publications["maven"])
+	}
 }
+

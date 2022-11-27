@@ -1,8 +1,8 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
-import org.adaptable.common.api.Response
+import io.github.markgregg.common.api.Response
 
 class EndpointResponse(
     val endPoint: String,
-    val response: Response
+    val response: io.github.markgregg.common.api.Response
 ) : Command

@@ -1,4 +1,4 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
 class MakeAvailable(
     val endPoint: String

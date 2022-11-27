@@ -1,13 +1,13 @@
-package org.adaptable.common.api.utils
+package io.github.markgregg.common.api.utils
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import org.adaptable.common.api.Request
+import io.github.markgregg.common.api.Request
 
 class StubRequest(
     val parameters: Map<String,String>?,
     val body: String
-) : Request {
+) : io.github.markgregg.common.api.Request {
     private var json: ObjectNode? = null
 
     override fun getItem(name: String): Any {

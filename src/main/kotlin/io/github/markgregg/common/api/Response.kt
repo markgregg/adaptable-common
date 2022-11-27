@@ -1,4 +1,4 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 

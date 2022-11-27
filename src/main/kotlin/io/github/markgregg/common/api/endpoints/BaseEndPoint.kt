@@ -1,11 +1,11 @@
-package org.adaptable.common.api.endpoints
+package io.github.markgregg.common.api.endpoints
 
-import org.adaptable.common.api.Request
-import org.adaptable.common.api.Response
-import org.adaptable.common.api.Rule
-import org.adaptable.common.api.interfaces.ActiveTestCase
-import org.adaptable.common.api.interfaces.EndPoint
-import org.adaptable.common.api.interfaces.MessageConverter
+import io.github.markgregg.common.api.Request
+import io.github.markgregg.common.api.Response
+import io.github.markgregg.common.api.Rule
+import io.github.markgregg.common.api.interfaces.ActiveTestCase
+import io.github.markgregg.common.api.interfaces.EndPoint
+import io.github.markgregg.common.api.interfaces.MessageConverter
 import org.slf4j.LoggerFactory
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicReference

@@ -1,4 +1,4 @@
-package org.adaptable.common.api.utils
+package io.github.markgregg.common.api.utils
 
 import io.kotest.core.spec.style.FunSpec
 

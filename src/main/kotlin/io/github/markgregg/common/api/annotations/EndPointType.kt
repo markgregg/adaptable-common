@@ -1,4 +1,4 @@
-package org.adaptable.common.api.annotations
+package io.github.markgregg.common.api.annotations
 
 enum class EndPointType {
     Internal,

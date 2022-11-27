@@ -1,9 +1,9 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
-import org.adaptable.common.api.utils.StubRequest
+import io.github.markgregg.common.api.utils.StubRequest
 import org.mockito.Mockito.mock
 
 class StandardRuleTest : FunSpec() {

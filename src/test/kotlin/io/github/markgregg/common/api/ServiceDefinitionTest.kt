@@ -1,4 +1,4 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import io.kotest.core.spec.style.FunSpec
@@ -11,7 +11,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .extensionDir shouldBe "extensionDir"
     }
     
@@ -19,7 +29,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .keyStoreType shouldBe "type"
     }
 
@@ -27,7 +47,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .keyStorePath shouldBe "path"
     }
 
@@ -35,7 +65,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .keySorePassword shouldBe "password"
     }
 
@@ -43,7 +83,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .keyAlias shouldBe "alias"
     }
 
@@ -51,7 +101,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .ports shouldBe ports
     }
 
@@ -59,7 +119,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .securePorts shouldBe securePorts
     }
 
@@ -67,7 +137,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .testCaseTimeout shouldBe 1000
     }
 
@@ -75,7 +155,17 @@ class ServiceDefinitionTest : FunSpec({
         val ports = listOf<Int>()
         val securePorts = listOf<Int>()
         val endPoints = listOf<EndPoint>()
-        ServiceDefinition("extensionDir", "type", "path", "password", "alias", ports, securePorts, 1000, endPoints)
+        ServiceDefinition(
+            "extensionDir",
+            "type",
+            "path",
+            "password",
+            "alias",
+            ports,
+            securePorts,
+            1000,
+            endPoints
+        )
             .endPoints shouldBe endPoints
     }
 
@@ -111,10 +201,10 @@ class ServiceDefinitionTest : FunSpec({
       "test" : "test"
     },
     "rules" : [ {
-      "@class" : "org.adaptable.common.api.StandardRule",
+      "@class" : "io.github.markgregg.common.api.StandardRule",
       "expression" : "'true'",
       "response" : {
-        "@class" : "org.adaptable.common.api.utils.StubResponse",
+        "@class" : "io.github.markgregg.common.api.utils.StubResponse",
         "status" : 200,
         "body" : "Hello world"
       },

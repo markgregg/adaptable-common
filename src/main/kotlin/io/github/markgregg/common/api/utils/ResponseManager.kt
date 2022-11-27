@@ -1,6 +1,6 @@
-package org.adaptable.common.api.utils
+package io.github.markgregg.common.api.utils
 
-import org.adaptable.common.api.Response
+import io.github.markgregg.common.api.Response
 import java.util.concurrent.atomic.AtomicInteger
 
 class ResponseManager(

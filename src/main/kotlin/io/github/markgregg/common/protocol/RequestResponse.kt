@@ -1,9 +1,9 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
-import org.adaptable.common.api.Request
+import io.github.markgregg.common.api.Request
 
 
 class RequestResponse(
     val endPointId: String,
-    val request: Request
+    val request: io.github.markgregg.common.api.Request
 ) : Response(true, "")

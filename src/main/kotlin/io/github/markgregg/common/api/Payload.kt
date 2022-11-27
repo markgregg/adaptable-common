@@ -1,4 +1,4 @@
-package org.adaptable.common.api
+package io.github.markgregg.common.api
 
 interface Payload<T> {
     fun payload(): T?

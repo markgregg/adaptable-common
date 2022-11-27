@@ -1,3 +1,3 @@
-package org.adaptable.common.api.endpoints
+package io.github.markgregg.common.api.endpoints
 
 class TestCaseAlreadyActiveException : Exception()

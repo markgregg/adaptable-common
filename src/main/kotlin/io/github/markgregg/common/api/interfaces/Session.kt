@@ -1,6 +1,6 @@
-package org.adaptable.common.api.interfaces
+package io.github.markgregg.common.api.interfaces
 
-import org.adaptable.common.api.Response
+import io.github.markgregg.common.api.Response
 
 interface Session {
     val sessionId: String

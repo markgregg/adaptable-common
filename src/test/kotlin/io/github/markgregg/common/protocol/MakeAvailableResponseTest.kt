@@ -1,4 +1,4 @@
-package org.adaptable.common.protocol
+package io.github.markgregg.common.protocol
 
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe

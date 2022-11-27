@@ -1,14 +1,14 @@
-package org.adaptable.common.api.endpoints
+package io.github.markgregg.common.api.endpoints
 
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.nulls.shouldBeNull
 import io.kotest.matchers.shouldBe
-import org.adaptable.common.api.Response
-import org.adaptable.common.api.Rule
-import org.adaptable.common.api.StandardRule
-import org.adaptable.common.api.interfaces.ActiveTestCase
-import org.adaptable.common.api.utils.StubRequest
+import io.github.markgregg.common.api.Response
+import io.github.markgregg.common.api.Rule
+import io.github.markgregg.common.api.StandardRule
+import io.github.markgregg.common.api.interfaces.ActiveTestCase
+import io.github.markgregg.common.api.utils.StubRequest
 import org.mockito.Mockito.mock
 import java.util.concurrent.atomic.AtomicBoolean
 
@@ -82,10 +82,10 @@ class BaseEndPointTest : FunSpec({
 	test("rule matches should return a response object") {
 		val response = mock(Response::class.java)
 		val endPoint = createMock(rules = listOf(
-			StandardRule(
-				"\$body.field=='value'",
-				response
-			)
+            StandardRule(
+                "\$body.field=='value'",
+                response
+            )
 		) )
 		endPoint.processRequest(StubRequest(
 			emptyMap(),
@@ -96,10 +96,10 @@ class BaseEndPointTest : FunSpec({
 	test("rule custom responses should proceed rules") {
 		val response = mock(Response::class.java)
 		val endPoint = createMock(rules = listOf(
-			StandardRule(
-				"\$body.field=='value'",
-				response
-			)
+            StandardRule(
+                "\$body.field=='value'",
+                response
+            )
 		) )
 		endPoint.response = mock(Response::class.java)
 		endPoint.processRequest(StubRequest(
@@ -112,10 +112,10 @@ class BaseEndPointTest : FunSpec({
 		val response = mock(Response::class.java)
 		val endPoint = createMock(
 			rules = listOf(
-				StandardRule(
-					"\$body.field=='value'",
-					response
-				)
+                StandardRule(
+                    "\$body.field=='value'",
+                    response
+                )
 			)
 		)
 		val response3 = mock(Response::class.java)
