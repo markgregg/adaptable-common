@@ -14,9 +14,6 @@ data class NoRule (
         responses: List<Response>
     ) : this(null, responses)
 
-    override fun evaluate(request: Request): Response? {
-        return responseManager.nextResponse()
-    }
-
+    override fun evaluate(request: Request): Response? = responseManager.nextResponse()
 
 }

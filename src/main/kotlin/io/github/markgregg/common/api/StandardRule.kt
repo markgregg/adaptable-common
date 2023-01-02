@@ -31,15 +31,14 @@ data class StandardRule (
     ) : this(expression, null, responses, null)
     private var operation: Operation? = null
 
-    override fun evaluate(request: Request): Response? {
-        return if( operation == null && expression == null ||
+    override fun evaluate(request: Request): Response? =
+        if( operation == null && expression == null ||
             evaluateRequest(request)
         ) {
             responseManager.nextResponse()
         } else {
             otherwise?.evaluate( request )
         }
-    }
 
     private fun evaluateRequest(request: Request): Boolean {
         if( operation == null ) {

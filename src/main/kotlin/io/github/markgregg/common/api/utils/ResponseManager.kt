@@ -9,8 +9,7 @@ class ResponseManager(
 ) {
     private val responseIterator = AtomicInteger()
 
-    fun nextResponse(): Response? {
-        return if( responses == null) {
+    fun nextResponse(): Response? = if( responses == null) {
             response
         } else {
             if( responseIterator.get() >= responses.size ) {
@@ -18,5 +17,4 @@ class ResponseManager(
             }
             responses[responseIterator.getAndIncrement()]
         }
-    }
 }
